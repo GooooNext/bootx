@@ -1,0 +1,57 @@
+// Menu
+$menu: (
+	dropdown: (
+		box-shadow: $dropdown-box-shadow,
+		z-index: 105,
+		background-color: $body-bg,
+        border-radius: $border-radius,
+        animation: true,
+        animation-speed: 0.3s,
+        animation-move-offset: 0.75rem
+	),
+
+	accordion: (
+        indention: 1rem,
+        arrow-transition: transform 0.3s ease
+	),
+
+	item: (
+		self: (
+            padding-y: 0.15rem,
+            padding-x: 0
+		)
+	),
+
+	link: (
+		self: (
+            padding-y: 0.65rem,
+            padding-x: 1rem,
+			bg-color: (
+				hover: $hover-bg,
+				show: $hover-bg,
+                here: $hover-bg,
+				active: $active-bg
+			)
+		),
+
+		icon: (
+			width: 2rem,
+			space: 0.5rem
+		),
+
+		bullet: (
+			width: 1.25rem,
+			space: 0.5rem
+		),
+
+		badge: (
+			space: 0.5rem
+		),
+
+		arrow: (
+            height: 0.8rem,
+            width: 0.8rem,
+			space: 0.5rem
+		)
+	)
+) !default;

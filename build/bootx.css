@@ -1,0 +1,126 @@
+/* Error: Undefined mixin.
+ *     ,
+ * 133 | /         @include media-breakpoint-direction($direction, $breakpoint) {
+ * 134 | |             // Accordion arrow
+ * 135 | |             .menu-item.menu#{$infix}-accordion {
+ * 136 | |                 &.showing:not(.menu-dropdown),
+ * 137 | |                 &.show:not(.hiding):not(.menu-dropdown) {
+ * 138 | |                     > .menu-link {
+ * 139 | |                         .menu-arrow:after {
+ * 140 | |                             @include menu-link-arrow-rotate(90deg, -90deg);
+ * 141 | |                         }
+ * 142 | |                     }
+ * 143 | |                 }
+ * 144 | |             }
+ * 145 | | 
+ * 146 | |             // Sub dropdown
+ * 147 | |             .menu-sub#{$infix}-dropdown {
+ * 148 | |                 display: none;
+ * 149 | |                 border-radius: map.get($menu, dropdown, border-radius);
+ * 150 | |                 background-color: map.get($menu, dropdown, background-color);
+ * 151 | |                 box-shadow: map.get($menu, dropdown, box-shadow);
+ * 152 | |                 z-index: map.get($menu, dropdown, z-index);
+ * 153 | | 
+ * 154 | |                 // Dropdown show
+ * 155 | |                 .show.menu-dropdown > &,
+ * 156 | |                 &.menu.show,
+ * 157 | |                 &.show[data-popper-placement] {
+ * 158 | |                     display: flex;
+ * 159 | | 
+ * 160 | |                     // Animation
+ * 161 | |                     @if (map.get($menu, dropdown, animation) == true) {
+ * 162 | |                         // Move up
+ * 163 | |                         animation: menu-sub-dropdown-animation-fade-in #{map.get($menu, dropdown, animation-speed)} ease 1, menu-sub-dropdown-animation-move-up #{map.get($menu, dropdown, animation-speed)} ease 1;
+ * 164 | |                         
+ * 165 | |                         // Move down
+ * 166 | |                         &[data-popper-placement="top"],
+ * 167 | |                         &[data-popper-placement="top-start"],
+ * 168 | |                         &[data-popper-placement="top-end"] {
+ * 169 | |                             animation: menu-sub-dropdown-animation-fade-in #{map.get($menu, dropdown, animation-speed)} ease 1, menu-sub-dropdown-animation-move-down #{map.get($menu, dropdown, animation-speed)} ease 1;
+ * 170 | |                         }                        
+ * 171 | |                     }                    
+ * 172 | |                 }
+ * 173 | |             }
+ * 174 | | 
+ * 175 | |             // Sub accordion
+ * 176 | |             .menu-sub#{$infix}-accordion {
+ * 177 | |                 display: none;
+ * 178 | | 
+ * 179 | |                 .show:not(.menu-dropdown) > &,
+ * 180 | |                 &.show {
+ * 181 | |                     display: flex;
+ * 182 | |                 }
+ * 183 | |             }
+ * 184 | | 
+ * 185 | |             // Inline
+ * 186 | |             .menu#{$infix}-inline {
+ * 187 | |                 display: flex;
+ * 188 | |             }
+ * 189 | | 
+ * 190 | |             // Reset link left & right paddings of level 1 menu links
+ * 191 | |             .menu#{$infix}-fit {
+ * 192 | |                 > .menu-item {
+ * 193 | |                     > .menu-content,
+ * 194 | |                     > .menu-link {
+ * 195 | |                         padding-left: 0 !important;
+ * 196 | |                         padding-right: 0 !important;
+ * 197 | |                     }
+ * 198 | |                 }
+ * 199 | |             }
+ * 200 | | 
+ * 201 | |             .menu#{$infix}-column {
+ * 202 | |                 flex-direction: column;
+ * 203 | |                 width: 100%;
+ * 204 | |             }
+ * 205 | | 
+ * 206 | |             .menu#{$infix}-row {
+ * 207 | |                 flex-direction: row;
+ * 208 | | 
+ * 209 | |                 > .menu-item {
+ * 210 | |                     display: flex;
+ * 211 | |                     align-items: center;
+ * 212 | | 
+ * 213 | |                     > .menu-link {
+ * 214 | |                         .menu-arrow:after {
+ * 215 | |                             @include menu-link-arrow-rotate(90deg, -90deg);
+ * 216 | |                         }
+ * 217 | |                     }
+ * 218 | |                 }
+ * 219 | |             }
+ * 220 | | 
+ * 221 | |             // Border radiuses
+ * 222 | |             .menu#{$infix}-rounded {
+ * 223 | |                 .menu-link {
+ * 224 | |                     @include border-radius($border-radius);
+ * 225 | |                 }
+ * 226 | |             }
+ * 227 | | 
+ * 228 | |             // Border radiuses
+ * 229 | |             .menu#{$infix}-pill {
+ * 230 | |                 .menu-link {
+ * 231 | |                     border-radius: 50px;
+ * 232 | |                 }
+ * 233 | |             }
+ * 234 | | 
+ * 235 | |             // Reset border radiuses
+ * 236 | |             .menu#{$infix}-rounded-0 {
+ * 237 | |                 .menu-link {
+ * 238 | |                     border-radius: 0 !important;
+ * 239 | |                 }
+ * 240 | |             }
+ * 241 | \         }
+ *     '
+ *   scss/components/menu/_base.scss 133:9  @import
+ *   scss/components/menu/menu.scss 2:9     @import
+ *   scss/custom.scss 30:9                  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined mixin.\a     \2577 \a 133 \2502  \250c          @include media-breakpoint-direction($direction, $breakpoint) {\a 134 \2502  \2502              // Accordion arrow\a 135 \2502  \2502              .menu-item.menu#{$infix}-accordion {\a 136 \2502  \2502                  &.showing:not(.menu-dropdown),\a 137 \2502  \2502                  &.show:not(.hiding):not(.menu-dropdown) {\a 138 \2502  \2502                      > .menu-link {\a 139 \2502  \2502                          .menu-arrow:after {\a 140 \2502  \2502                              @include menu-link-arrow-rotate(90deg, -90deg);\a 141 \2502  \2502                          }\a 142 \2502  \2502                      }\a 143 \2502  \2502                  }\a 144 \2502  \2502              }\a 145 \2502  \2502  \a 146 \2502  \2502              // Sub dropdown\a 147 \2502  \2502              .menu-sub#{$infix}-dropdown {\a 148 \2502  \2502                  display: none;\a 149 \2502  \2502                  border-radius: map.get($menu, dropdown, border-radius);\a 150 \2502  \2502                  background-color: map.get($menu, dropdown, background-color);\a 151 \2502  \2502                  box-shadow: map.get($menu, dropdown, box-shadow);\a 152 \2502  \2502                  z-index: map.get($menu, dropdown, z-index);\a 153 \2502  \2502  \a 154 \2502  \2502                  // Dropdown show\a 155 \2502  \2502                  .show.menu-dropdown > &,\a 156 \2502  \2502                  &.menu.show,\a 157 \2502  \2502                  &.show[data-popper-placement] {\a 158 \2502  \2502                      display: flex;\a 159 \2502  \2502  \a 160 \2502  \2502                      // Animation\a 161 \2502  \2502                      @if (map.get($menu, dropdown, animation) == true) {\a 162 \2502  \2502                          // Move up\a 163 \2502  \2502                          animation: menu-sub-dropdown-animation-fade-in #{map.get($menu, dropdown, animation-speed)} ease 1, menu-sub-dropdown-animation-move-up #{map.get($menu, dropdown, animation-speed)} ease 1;\a 164 \2502  \2502                          \a 165 \2502  \2502                          // Move down\a 166 \2502  \2502                          &[data-popper-placement="top"],\a 167 \2502  \2502                          &[data-popper-placement="top-start"],\a 168 \2502  \2502                          &[data-popper-placement="top-end"] {\a 169 \2502  \2502                              animation: menu-sub-dropdown-animation-fade-in #{map.get($menu, dropdown, animation-speed)} ease 1, menu-sub-dropdown-animation-move-down #{map.get($menu, dropdown, animation-speed)} ease 1;\a 170 \2502  \2502                          }                        \a 171 \2502  \2502                      }                    \a 172 \2502  \2502                  }\a 173 \2502  \2502              }\a 174 \2502  \2502  \a 175 \2502  \2502              // Sub accordion\a 176 \2502  \2502              .menu-sub#{$infix}-accordion {\a 177 \2502  \2502                  display: none;\a 178 \2502  \2502  \a 179 \2502  \2502                  .show:not(.menu-dropdown) > &,\a 180 \2502  \2502                  &.show {\a 181 \2502  \2502                      display: flex;\a 182 \2502  \2502                  }\a 183 \2502  \2502              }\a 184 \2502  \2502  \a 185 \2502  \2502              // Inline\a 186 \2502  \2502              .menu#{$infix}-inline {\a 187 \2502  \2502                  display: flex;\a 188 \2502  \2502              }\a 189 \2502  \2502  \a 190 \2502  \2502              // Reset link left & right paddings of level 1 menu links\a 191 \2502  \2502              .menu#{$infix}-fit {\a 192 \2502  \2502                  > .menu-item {\a 193 \2502  \2502                      > .menu-content,\a 194 \2502  \2502                      > .menu-link {\a 195 \2502  \2502                          padding-left: 0 !important;\a 196 \2502  \2502                          padding-right: 0 !important;\a 197 \2502  \2502                      }\a 198 \2502  \2502                  }\a 199 \2502  \2502              }\a 200 \2502  \2502  \a 201 \2502  \2502              .menu#{$infix}-column {\a 202 \2502  \2502                  flex-direction: column;\a 203 \2502  \2502                  width: 100%;\a 204 \2502  \2502              }\a 205 \2502  \2502  \a 206 \2502  \2502              .menu#{$infix}-row {\a 207 \2502  \2502                  flex-direction: row;\a 208 \2502  \2502  \a 209 \2502  \2502                  > .menu-item {\a 210 \2502  \2502                      display: flex;\a 211 \2502  \2502                      align-items: center;\a 212 \2502  \2502  \a 213 \2502  \2502                      > .menu-link {\a 214 \2502  \2502                          .menu-arrow:after {\a 215 \2502  \2502                              @include menu-link-arrow-rotate(90deg, -90deg);\a 216 \2502  \2502                          }\a 217 \2502  \2502                      }\a 218 \2502  \2502                  }\a 219 \2502  \2502              }\a 220 \2502  \2502  \a 221 \2502  \2502              // Border radiuses\a 222 \2502  \2502              .menu#{$infix}-rounded {\a 223 \2502  \2502                  .menu-link {\a 224 \2502  \2502                      @include border-radius($border-radius);\a 225 \2502  \2502                  }\a 226 \2502  \2502              }\a 227 \2502  \2502  \a 228 \2502  \2502              // Border radiuses\a 229 \2502  \2502              .menu#{$infix}-pill {\a 230 \2502  \2502                  .menu-link {\a 231 \2502  \2502                      border-radius: 50px;\a 232 \2502  \2502                  }\a 233 \2502  \2502              }\a 234 \2502  \2502  \a 235 \2502  \2502              // Reset border radiuses\a 236 \2502  \2502              .menu#{$infix}-rounded-0 {\a 237 \2502  \2502                  .menu-link {\a 238 \2502  \2502                      border-radius: 0 !important;\a 239 \2502  \2502                  }\a 240 \2502  \2502              }\a 241 \2502  \2514          }\a     \2575 \a   scss/components/menu/_base.scss 133:9  @import\a   scss/components/menu/menu.scss 2:9     @import\a   scss/custom.scss 30:9                  root stylesheet';
+}

@@ -1,1 +1,4 @@
 # bootx
+`npm run build`
+
+
